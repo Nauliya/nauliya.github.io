@@ -1,0 +1,48 @@
+<html>
+<title>Tugas13-1.Html</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<body>
+<div class="w3-container">
+ <img src="atas.jpg" width=100% height=30%>
+</div>
+<div class="w3-bar w3-green">
+ <button class="w3-bar-item w3-button" onclick="openMenu('Home')">Menu</button>
+ <button class="w3-bar-item w3-button" onclick="openMenu('Mobil')">Mobil</button>
+ <button class="w3-bar-item w3-button" onclick="openMenu('unikom')">Unikom</button>
+ <button class="w3-bar-item w3-button" onclick="openMenu('Mickey')">Mickey</button>
+  <button class="w3-bar-item w3-button" onclick="openMenu('Aurora')">Aurora</button>
+</div>
+<div id="Home" class="w3-container menu ">
+<center>
+ <h2>Selamat Datang</h2>
+ <p> Ini Web Punya Noval Auliya IF-5</p>
+</div>
+<div id="Mobil" class="w3-container menu" style="display:none">
+ <p>Ini Mobil.</p>
+  <img class="w3-animate-fading" src="mobil.jpg" style="width:50%">
+</div>
+<div id="unikom" class="w3-container menu w3-animate-bottom" style="display:none ">
+ <p>Ini Unikom</p>
+ <img src="gedung.jpg" alt="Car" style="width:50%">
+</div>
+<div id="Mickey" class="w3-container menu w3-animate-top" style="display:none">
+ <h2>Ini Tikus</h2>
+ <img src="mickey.jpg" alt="Car" style="width:50%">
+</div>
+<div id="Aurora" class="w3-container menu w3-animate-zoom" style="display:none">
+ <h2>Ini Aurora</h2>
+ <img src="aurora.jpg" alt="Car" style="width:50%">
+</div>
+<script>
+function openMenu(namaMenu) {
+ var i;
+ var x = document.getElementsByClassName("menu");
+ for (i = 0; i < x.length; i++) {
+ x[i].style.display = "none"; 
+ }
+ document.getElementById(namaMenu).style.display = "block"; 
+}
+</script>
+</body>
+</html>
